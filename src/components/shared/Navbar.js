@@ -17,6 +17,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import XIcon from "@mui/icons-material/X";
+import Header from "./Header";
 
 const navItem = [
   {
@@ -47,47 +48,50 @@ const navItem = [
 
 function Navbar() {
   return (
-    <AppBar position="static" className="bg-slate-700">
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <Image src={logo} width={100} height={100} alt="logo" />
-          <Box className="w-full text-center">
-            {navItem.map((item) => (
-              <Link key={item} href={item.pathname}>
-                <Button className="text-white">{item.route}</Button>
-              </Link>
-            ))}
-          </Box>
+    <>
+      <Header />
+      <AppBar position="static" className="bg-slate-800">
+        <Container maxWidth="xl">
+          <Toolbar disableGutters>
+            <Image src={logo} width={100} height={100} alt="logo" />
+            <Box className="w-full text-center">
+              {navItem.map((item) => (
+                <Link key={item} href={item.pathname}>
+                  <Button className="text-white">{item.route}</Button>
+                </Link>
+              ))}
+            </Box>
 
-          <Box>
-            <Stack
-              direction="row"
-              sx={{
-                "& svg": {
-                  color: "white",
-                },
-              }}
-            >
-              <IconButton>
-                <FacebookIcon />
-              </IconButton>
-              <IconButton>
-                <YouTubeIcon />
-              </IconButton>
-              <IconButton>
-                <InstagramIcon />
-              </IconButton>
-              <IconButton>
-                <LinkedInIcon />
-              </IconButton>
-              <IconButton>
-                <XIcon />
-              </IconButton>
-            </Stack>
-          </Box>
-        </Toolbar>
-      </Container>
-    </AppBar>
+            <Box>
+              <Stack
+                direction="row"
+                sx={{
+                  "& svg": {
+                    color: "white",
+                  },
+                }}
+              >
+                <IconButton>
+                  <FacebookIcon />
+                </IconButton>
+                <IconButton>
+                  <YouTubeIcon />
+                </IconButton>
+                <IconButton>
+                  <InstagramIcon />
+                </IconButton>
+                <IconButton>
+                  <LinkedInIcon />
+                </IconButton>
+                <IconButton>
+                  <XIcon />
+                </IconButton>
+              </Stack>
+            </Box>
+          </Toolbar>
+        </Container>
+      </AppBar>
+    </>
   );
 }
 export default Navbar;
