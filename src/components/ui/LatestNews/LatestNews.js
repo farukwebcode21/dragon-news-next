@@ -1,0 +1,55 @@
+import * as React from "react";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+import TopNews from "@/assets/top-news.png";
+import Image from "next/image";
+
+export default function LatestNews() {
+  return (
+    // sx={{ maxWidth: 800 }}
+    <Card className="my-2">
+      <CardMedia>
+        <Image src={TopNews} alt="TopNews" />
+      </CardMedia>
+      <CardContent>
+        <p className="text-white w-[130px] bg-red-600 px-1  font-bold uppercase underline rounded">
+          Technology
+        </p>
+        <Typography gutterBottom variant="h5" component="div">
+          Bitcoin Climbs as Elon Musk Says Tesla Likely to accept it again
+        </Typography>
+        <Typography
+          className="bg-red-600 w-[220px] px-1 text-white"
+          gutterBottom
+          variant="body2"
+          component="div"
+        >
+          By Faruk Ahmad -Feb 09 2024
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          Lizards are a widespread group of squamate reptiles, with over 6,000
+          species, ranging across all continents except Antarctica Lorem ipsum
+          dolor sit amet consectetur adipisicing elit. Cupiditate quam ducimus
+          quae iusto quas maxime repellat dolore praesentium eius porro, nobis
+          quasi qui hic dolores id! Odio eius error tempora nostrum consequuntur
+          perferendis ut provident voluptatum vero expedita adipisci repellat
+          ipsum animi, autem atque quaerat saepe quod vitae a obcaecati
+          reprehenderit modi voluptate. Harum perferendis eaque quos, veniam
+          provident quod repudiandae tenetur adipisci tempore tempora blanditiis
+          pariatur, amet, eos odio. Sed nisi ducimus, aliquid pariatur, nam
+          mollitia excepturi consequatur amet natus, error libero! Expedita
+          mollitia minus animi dolore accusantium fugiat, voluptatem placeat
+          quisquam aliquid quasi saepe? Facere incidunt aliquid maxime?
+        </Typography>
+      </CardContent>
+      <CardActions>
+        <Button size="small">Share</Button>
+        <Button size="small">Learn More</Button>
+      </CardActions>
+    </Card>
+  );
+}
