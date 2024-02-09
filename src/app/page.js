@@ -1,5 +1,6 @@
 import Grid from "@mui/material/Grid";
 import LatestNews from "../components/ui/LatestNews/LatestNews";
+import SideBarPages from "../components/ui/SideBar/SideBar";
 
 export default function Home() {
   return (
@@ -9,7 +10,7 @@ export default function Home() {
           <LatestNews />
         </Grid>
         <Grid item xs={4}>
-          <h1>Colume 4</h1>
+          <SideBarPages />
         </Grid>
       </Grid>
     </>
