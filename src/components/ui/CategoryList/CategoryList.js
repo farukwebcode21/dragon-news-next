@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const CategoryList = async () => {
   const { data: allCategory } = await getAllCategories();
-  console.log(allCategory);
+
   return (
     <Box className="py-3">
       <Divider />
